@@ -53,6 +53,13 @@
             this.importToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.structureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.widthUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.heightUpDown)).BeginInit();
@@ -145,9 +152,9 @@
             // setButton
             // 
             this.setButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.setButton.Location = new System.Drawing.Point(509, 161);
+            this.setButton.Location = new System.Drawing.Point(521, 147);
             this.setButton.Name = "setButton";
-            this.setButton.Size = new System.Drawing.Size(123, 51);
+            this.setButton.Size = new System.Drawing.Size(123, 28);
             this.setButton.TabIndex = 6;
             this.setButton.Text = "Generuj";
             this.setButton.UseVisualStyleBackColor = false;
@@ -160,7 +167,7 @@
             0,
             0,
             0});
-            this.grainsUpDown.Location = new System.Drawing.Point(549, 121);
+            this.grainsUpDown.Location = new System.Drawing.Point(549, 114);
             this.grainsUpDown.Maximum = new decimal(new int[] {
             500,
             0,
@@ -183,7 +190,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(481, 121);
+            this.label3.Location = new System.Drawing.Point(481, 116);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(69, 13);
             this.label3.TabIndex = 8;
@@ -192,9 +199,9 @@
             // generateButton
             // 
             this.generateButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.generateButton.Location = new System.Drawing.Point(509, 218);
+            this.generateButton.Location = new System.Drawing.Point(521, 181);
             this.generateButton.Name = "generateButton";
-            this.generateButton.Size = new System.Drawing.Size(123, 51);
+            this.generateButton.Size = new System.Drawing.Size(123, 28);
             this.generateButton.TabIndex = 9;
             this.generateButton.Text = "Ziarna";
             this.generateButton.UseVisualStyleBackColor = false;
@@ -203,9 +210,9 @@
             // growthButton
             // 
             this.growthButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.growthButton.Location = new System.Drawing.Point(509, 275);
+            this.growthButton.Location = new System.Drawing.Point(521, 215);
             this.growthButton.Name = "growthButton";
-            this.growthButton.Size = new System.Drawing.Size(123, 51);
+            this.growthButton.Size = new System.Drawing.Size(123, 28);
             this.growthButton.TabIndex = 10;
             this.growthButton.Text = "Start";
             this.growthButton.UseVisualStyleBackColor = false;
@@ -214,7 +221,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(529, 343);
+            this.label12.Location = new System.Drawing.Point(546, 246);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(80, 13);
             this.label12.TabIndex = 30;
@@ -223,9 +230,9 @@
             // boundariesColorinBbutton
             // 
             this.boundariesColorinBbutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.boundariesColorinBbutton.Location = new System.Drawing.Point(509, 385);
+            this.boundariesColorinBbutton.Location = new System.Drawing.Point(521, 288);
             this.boundariesColorinBbutton.Name = "boundariesColorinBbutton";
-            this.boundariesColorinBbutton.Size = new System.Drawing.Size(123, 48);
+            this.boundariesColorinBbutton.Size = new System.Drawing.Size(123, 28);
             this.boundariesColorinBbutton.TabIndex = 32;
             this.boundariesColorinBbutton.Text = "Granice";
             this.boundariesColorinBbutton.UseVisualStyleBackColor = false;
@@ -234,9 +241,9 @@
             // ClearGrainsButton
             // 
             this.ClearGrainsButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.ClearGrainsButton.Location = new System.Drawing.Point(509, 439);
+            this.ClearGrainsButton.Location = new System.Drawing.Point(521, 322);
             this.ClearGrainsButton.Name = "ClearGrainsButton";
-            this.ClearGrainsButton.Size = new System.Drawing.Size(123, 49);
+            this.ClearGrainsButton.Size = new System.Drawing.Size(123, 28);
             this.ClearGrainsButton.TabIndex = 33;
             this.ClearGrainsButton.Text = "Czyść";
             this.ClearGrainsButton.UseVisualStyleBackColor = false;
@@ -250,7 +257,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 1, 0, 1);
-            this.menuStrip1.Size = new System.Drawing.Size(659, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(672, 24);
             this.menuStrip1.TabIndex = 38;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -269,7 +276,7 @@
             this.importToolStripMenuItem,
             this.exportToolStripMenuItem});
             this.microstructureToolStripMenuItem.Name = "microstructureToolStripMenuItem";
-            this.microstructureToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.microstructureToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
             this.microstructureToolStripMenuItem.Text = "TXT";
             // 
             // importToolStripMenuItem
@@ -292,26 +299,26 @@
             this.savePictureToolStripMenuItem,
             this.importToolStripMenuItem1});
             this.bitmapToolStripMenuItem.Name = "bitmapToolStripMenuItem";
-            this.bitmapToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.bitmapToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
             this.bitmapToolStripMenuItem.Text = "Bitmap";
             // 
             // savePictureToolStripMenuItem
             // 
             this.savePictureToolStripMenuItem.Name = "savePictureToolStripMenuItem";
-            this.savePictureToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.savePictureToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
             this.savePictureToolStripMenuItem.Text = "Export";
             this.savePictureToolStripMenuItem.Click += new System.EventHandler(this.savePictureToolStripMenuItem_Click);
             // 
             // importToolStripMenuItem1
             // 
             this.importToolStripMenuItem1.Name = "importToolStripMenuItem1";
-            this.importToolStripMenuItem1.Size = new System.Drawing.Size(138, 22);
+            this.importToolStripMenuItem1.Size = new System.Drawing.Size(110, 22);
             this.importToolStripMenuItem1.Text = "Import";
             this.importToolStripMenuItem1.Click += new System.EventHandler(this.importToolStripMenuItem1_Click);
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(539, 494);
+            this.textBox1.Location = new System.Drawing.Point(549, 356);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(60, 20);
             this.textBox1.TabIndex = 39;
@@ -319,17 +326,87 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(521, 359);
+            this.textBox2.Location = new System.Drawing.Point(532, 262);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(100, 20);
             this.textBox2.TabIndex = 40;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.button1.Location = new System.Drawing.Point(521, 475);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(123, 28);
+            this.button1.TabIndex = 41;
+            this.button1.Text = "Inkluzje";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(484, 394);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(55, 17);
+            this.checkBox1.TabIndex = 42;
+            this.checkBox1.Text = "Okrąg";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(580, 394);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(65, 17);
+            this.checkBox2.TabIndex = 43;
+            this.checkBox2.Text = "Kwadrat";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(484, 437);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(69, 20);
+            this.textBox3.TabIndex = 44;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(591, 437);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(69, 20);
+            this.textBox4.TabIndex = 45;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(504, 421);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(29, 13);
+            this.label4.TabIndex = 46;
+            this.label4.Text = "Ilość";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(600, 421);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(45, 13);
+            this.label5.TabIndex = 47;
+            this.label5.Text = "Rozmiar";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Teal;
-            this.ClientSize = new System.Drawing.Size(659, 526);
+            this.ClientSize = new System.Drawing.Size(672, 534);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.checkBox2);
+            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.ClearGrainsButton);
@@ -387,6 +464,13 @@
         private System.Windows.Forms.ToolStripMenuItem importToolStripMenuItem1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
     }
 }
 

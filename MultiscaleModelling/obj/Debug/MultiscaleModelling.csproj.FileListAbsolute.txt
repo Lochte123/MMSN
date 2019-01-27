@@ -37,3 +37,13 @@ C:\Users\Łukasz\Downloads\Multiscale\Multiscale\MultiscaleModelling\obj\Debug\M
 C:\Users\Łukasz\Downloads\Multiscale\Multiscale\MultiscaleModelling\bin\Debug\MultiscaleModelling.exe.config
 C:\Users\Łukasz\Downloads\Multiscale\Multiscale\MultiscaleModelling\bin\Debug\MultiscaleModelling.exe
 C:\Users\Łukasz\Downloads\Multiscale\Multiscale\MultiscaleModelling\bin\Debug\MultiscaleModelling.pdb
+C:\Users\Łukasz\Documents\Multiscale\Multiscale\MultiscaleModelling\bin\Debug\MultiscaleModelling.exe.config
+C:\Users\Łukasz\Documents\Multiscale\Multiscale\MultiscaleModelling\bin\Debug\MultiscaleModelling.exe
+C:\Users\Łukasz\Documents\Multiscale\Multiscale\MultiscaleModelling\bin\Debug\MultiscaleModelling.pdb
+C:\Users\Łukasz\Documents\Multiscale\Multiscale\MultiscaleModelling\obj\Debug\MultiscaleModelling.csprojAssemblyReference.cache
+C:\Users\Łukasz\Documents\Multiscale\Multiscale\MultiscaleModelling\obj\Debug\MultiscaleModelling.Form1.resources
+C:\Users\Łukasz\Documents\Multiscale\Multiscale\MultiscaleModelling\obj\Debug\MultiscaleModelling.Properties.Resources.resources
+C:\Users\Łukasz\Documents\Multiscale\Multiscale\MultiscaleModelling\obj\Debug\MultiscaleModelling.csproj.GenerateResource.cache
+C:\Users\Łukasz\Documents\Multiscale\Multiscale\MultiscaleModelling\obj\Debug\MultiscaleModelling.csproj.CoreCompileInputs.cache
+C:\Users\Łukasz\Documents\Multiscale\Multiscale\MultiscaleModelling\obj\Debug\MultiscaleModelling.exe
+C:\Users\Łukasz\Documents\Multiscale\Multiscale\MultiscaleModelling\obj\Debug\MultiscaleModelling.pdb

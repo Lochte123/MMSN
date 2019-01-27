@@ -612,5 +612,218 @@ namespace MultiscaleModelling
             Bitmap bm = new Bitmap(FilePath);
             structureBox.Image = bm;
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked)
+            {
+                checkBox2.Enabled = false;
+                int wUpDown = (int)widthUpDown.Value;
+                int hUpDown = (int)heightUpDown.Value;
+                int numOfInclusions = int.Parse(textBox3.Text);
+                int r = int.Parse(textBox4.Text);
+                int x, y, a, b, c, d, xprev, xnext, yprev, ynext = 0;
+
+                for (int i = 0; i < numOfInclusions; i++)
+                {
+                    do
+                    {
+                        x = rand.Next(wUpDown);
+                        y = rand.Next(hUpDown);
+                        a = x + r;
+                        b = y + r;
+                        c = x - r;
+                        d = y - r;
+
+                    } while (a > wUpDown - 1 || b > hUpDown - 1 || c <= 0 || d <= 0);
+
+                    if (x == 0)
+                        xprev = wUpDown - 1;
+                    else
+                        xprev = x - 1;
+
+                    if (x == wUpDown - 1)
+                        xnext = 0;
+                    else
+                        xnext = x + 1;
+
+                    if (y == 0)
+                        yprev = hUpDown - 1;
+                    else
+                        yprev = y - 1;
+
+                    if (y == hUpDown - 1)
+                        ynext = 0;
+                    else
+                        ynext = y + 1;
+
+                    Color color = structure.CurrentCells[x, y].Color;
+
+                    if (wasProcessed)
+                    {
+                        if (structure.CurrentCells[xprev, yprev].Color != color || structure.CurrentCells[xprev, y].Color != color || structure.CurrentCells[xprev, ynext].Color != color || structure.CurrentCells[x, ynext].Color != color
+                            || structure.CurrentCells[xnext, ynext].Color != color || structure.CurrentCells[xnext, y].Color != color || structure.CurrentCells[xnext, yprev].Color != color || structure.CurrentCells[x, yprev].Color != color)
+                        {
+                            for (int j = r; j > 0; j--)
+                            {
+                                r = j;
+                                for (int k = 0; k < 360; k += 1)
+                                {
+                                    double angle = k * System.Math.PI / 180;
+                                    int xx = (int)(x + r * System.Math.Cos(angle));
+                                    int yy = (int)(y + r * System.Math.Sin(angle));
+
+                                    structure.CurrentCells[xx, yy].Color = Color.FromArgb(0, 0, 0);
+                                }
+                            }
+                            r = int.Parse(textBox4.Text);
+                        }
+                        else
+                            i--;
+                    }
+                    else
+                    {
+                        for (int j = r; j > 0; j--)
+                        {
+                            r = j;
+                            for (int k = 0; k < 360; k += 1)
+                            {
+                                double angle = k * System.Math.PI / 180;
+                                int xx = (int)(x + r * System.Math.Cos(angle));
+                                int yy = (int)(y + r * System.Math.Sin(angle));
+
+                                structure.CurrentCells[xx, yy].Color = Color.FromArgb(0, 0, 0);
+                            }
+                        }
+                        r = int.Parse(textBox4.Text);
+                    }
+                }
+
+                bool allNotWhite = true;
+
+                for (int i = 0; i < structure.StructWidth; i++)
+                {
+                    for (int j = 0; j < structure.StructHeight; j++)
+                    {
+                        structure.PrevCells[i, j].Color = structure.CurrentCells[i, j].Color;
+                        if (structure.PrevCells[i, j].Color.Equals(Color.FromArgb(255, 255, 255)))
+                            allNotWhite = false;
+                    }
+                }
+                if (allNotWhite)
+                    isProcessing = false;
+                refreshStructureBox();
+            }
+
+            else if (checkBox2.Checked)
+            {
+                checkBox1.Enabled = false;
+                int wUpDown = (int)widthUpDown.Value;
+                int hUpDown = (int)heightUpDown.Value;
+                int numOfInclusions = int.Parse(textBox3.Text);
+                int d = int.Parse(textBox4.Text);
+                int sizeOfInclusions = (int)Math.Round(d / 1.414);
+                int xprev, xnext, yprev, ynext = 0;
+
+
+                for (int i = 0; i < numOfInclusions; i++)
+                {
+                    int x = rand.Next(wUpDown);
+                    int y = rand.Next(hUpDown);
+                    int a = x + sizeOfInclusions;
+                    int b = y + sizeOfInclusions;
+
+                    if (x == 0)
+                        xprev = wUpDown - 1;
+                    else
+                        xprev = x - 1;
+
+                    if (x == wUpDown - 1)
+                        xnext = 0;
+                    else
+                        xnext = x + 1;
+
+                    if (y == 0)
+                        yprev = hUpDown - 1;
+                    else
+                        yprev = y - 1;
+
+                    if (y == hUpDown - 1)
+                        ynext = 0;
+                    else
+                        ynext = y + 1;
+
+                    Color color = structure.CurrentCells[x, y].Color;
+                    if (wasProcessed)
+                    {
+                        if (structure.CurrentCells[xprev, yprev].Color != color || structure.CurrentCells[xprev, y].Color != color || structure.CurrentCells[xprev, ynext].Color != color || structure.CurrentCells[x, ynext].Color != color
+                            || structure.CurrentCells[xnext, ynext].Color != color || structure.CurrentCells[xnext, y].Color != color || structure.CurrentCells[xnext, yprev].Color != color || structure.CurrentCells[x, yprev].Color != color)
+                        {
+                            if (a < wUpDown && b < hUpDown)
+                            {
+                                for (int j = x; j < a; j++)
+                                {
+                                    for (int k = y; k < b; k++)
+                                    {
+                                        structure.CurrentCells[j, k].Color = Color.FromArgb(0, 0, 0);
+                                    }
+                                }
+                            }
+                            else
+                            {
+                                for (int j = a; j > x; j--)
+                                {
+                                    for (int k = b; k < y; k--)
+                                    {
+                                        structure.CurrentCells[j, k].Color = Color.FromArgb(0, 0, 0);
+                                    }
+                                }
+
+                            }
+                        }
+                        else
+                            i--;
+                    }
+                    else
+                    {
+                        if (a < wUpDown && b < hUpDown)
+                        {
+                            for (int j = x; j < a; j++)
+                            {
+                                for (int k = y; k < b; k++)
+                                {
+                                    structure.CurrentCells[j, k].Color = Color.FromArgb(0, 0, 0);
+                                }
+                            }
+                        }
+                        else
+                        {
+                            for (int j = a; j > x; j--)
+                            {
+                                for (int k = b; k < y; k--)
+                                {
+                                    structure.CurrentCells[j, k].Color = Color.FromArgb(0, 0, 0);
+                                }
+                            }
+                        }
+                    }
+                }
+                bool allNotWhite = true;
+
+                for (int i = 0; i < structure.StructWidth; i++)
+                {
+                    for (int j = 0; j < structure.StructHeight; j++)
+                    {
+                        structure.PrevCells[i, j].Color = structure.CurrentCells[i, j].Color;
+                        if (structure.PrevCells[i, j].Color.Equals(Color.FromArgb(255, 255, 255)))
+                            allNotWhite = false;
+                    }
+                }
+                if (allNotWhite)
+                    isProcessing = false;
+                refreshStructureBox();
+                growthButton.Enabled = true;
+            }
+        }
     }
 }
